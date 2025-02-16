@@ -74,11 +74,6 @@ const LoginPage = () => {
 
             <div>
               <button
-              onClick={() =>
-                signIn("google", {
-                  callbackUrl: "http://localhost:3000/dashboard",
-                })
-              }
                 type="submit"
                 className="w-full border border-teal-500 text-teal-500 font-semibold py-2 px-4 rounded-md shadow-md hover:bg-teal-500 hover:text-black"
               >
@@ -100,7 +95,14 @@ const LoginPage = () => {
 
           {/* Social Login Buttons */}
           <div className="flex justify-center gap-4 mt-4">
-            <button className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md hover:bg-gray-200">
+            <button
+              onClick={() =>
+                signIn("google", {
+                  callbackUrl: "http://localhost:3000/dashboard",
+                })
+              }
+              className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md hover:bg-gray-200"
+            >
               <Image
                 src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
                 width={30}
