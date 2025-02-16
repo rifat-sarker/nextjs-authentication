@@ -74,6 +74,11 @@ const LoginPage = () => {
 
             <div>
               <button
+              onClick={() =>
+                signIn("google", {
+                  callbackUrl: "http://localhost:3000/dashboard",
+                })
+              }
                 type="submit"
                 className="w-full border border-teal-500 text-teal-500 font-semibold py-2 px-4 rounded-md shadow-md hover:bg-teal-500 hover:text-black"
               >
